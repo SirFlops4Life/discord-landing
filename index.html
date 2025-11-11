@@ -1,107 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🌟 Join Our Discord Community!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌟 Join Our Discord Community!</title>
+<link rel="icon" type="image/png" href="discord-favicon.png">
+<style>
+  /* General Reset */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16913306718"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-16913306718');
-  </script>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+    padding-bottom: 80px; /* space for bottom sticky button */
+  }
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="discord-favicon.png">
+  header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    max-width: 900px;
+    margin: 40px auto 20px auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
 
-  <style>
-    /* General Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+  header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+  }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      min-height: 100vh;
-      padding-bottom: 80px; /* Space for sticky button */
+  header p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 18px 40px;
+    font-size: 1.2em;
+    color: #fff;
+    background: rgba(114, 137, 218, 0.8);
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+
+  .btn:hover {
+    background: rgba(114, 137, 218, 1);
+    transform: scale(1.05);
+  }
+
+  section, footer {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px 25px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+
+  section h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  }
+
+  section p, section ul {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  section ul li { margin-left: 20px; }
+
+  footer { text-align: center; padding: 40px 20px; }
+  footer a { color: #fff; text-decoration: underline; }
+
+  .emoji { font-size: 1.2em; margin-right: 8px; }
+
+  /* Bottom sticky join button */
+  .sticky-btn {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+  }
+
+  /* Optional mobile size adjustment for sticky button */
+  @media (max-width: 600px) {
+    .sticky-btn .btn {
+      padding: 14px 28px;
+      font-size: 1em;
     }
-
-    header {
-      text-align: center;
-      padding: 40px 20px 20px 20px;
-      max-width: 900px;
-      margin: 40px auto 20px auto;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-    }
-
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-      color: #fff;
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
-    }
-
-    header p { font-size: 1.3em; margin-bottom: 30px; }
-
-    section, footer {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 40px 25px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-    }
-
-    section h2 {
-      font-size: 2.2em;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-    }
-
-    section p, section ul { font-size: 1.1em; line-height: 1.6; margin-bottom: 15px; }
-    section ul li { margin-left: 20px; }
-
-    footer { text-align: center; padding: 40px 20px; }
-    footer a { color: #fff; text-decoration: underline; }
-
-    /* Sticky Join Button */
-    .sticky-btn {
-      position: fixed;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 999;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 18px 40px;
-      font-size: 1.2em;
-      color: #fff;
-      background: rgba(114, 137, 218, 0.85);
-      border: none;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    }
-
-    .btn:hover {
-      background: rgba(114, 137, 218, 1);
-      transform: scale(1.05);
-    }
-
-    @media (max-width: 600px) {
-      .sticky-btn .btn { padding: 14px 28px; font-size: 1em; }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
